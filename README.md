@@ -30,7 +30,8 @@ when setting `smtp` configurations that's used in several locations.
     $boolean = Swifter::mail(array $options);
     $boolean = Swifter::smtp(array $options);
 
-The `$options` supports the following items:
+### Configurations
+The `$options` array supports the following items:
 
     $options = array(
         'from' => array('my@mail.tld' => 'My Name'),
@@ -58,3 +59,37 @@ can add them to the `$options` array in `Swifter::smtp`.
         'username' => null,
         'password' => null,
     );
+
+### Examples
+Quickly send an e-mail without a template:
+
+    use li3_swifter\extensions\Swifter;
+
+    Swifter::smtp(array(
+        'from' => array('my@email.tld' => 'My Name'),
+        'to' => 'foo@bar',
+        'body' => 'This is the content body'
+    ));
+
+To send a quick e-mail using `mail` template:
+
+    use li3_swifter\extensions\Swifter;
+
+    $to = 'foo@bar';
+
+    Swifter::smtp(array(
+        'from' => array('my@email.tld' => 'My Name'),
+        'to' => $to,
+        'template' => 'emails/welcome',
+        'data' => array('to' => $to),
+    ));
+
+    // 'views/emails/welcome.mail.php'
+    <html>
+    <head>
+    <title>Welcome</title>
+    </head>
+    <body>
+        <h1>E-mail sent to: <?=$to ?></h1>
+    </body>
+    </html>
