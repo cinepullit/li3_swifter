@@ -17,6 +17,8 @@ We can add global configurations to the `Swifter` class when adding the library.
 when setting `smtp` configurations that's used in several locations.
 
     Libraris::add('li3_swifter', array(
+        'from' => array('my@mail.tld' => 'My Name'),
+        'to' => 'foo@bar.tld', // Useful if all e-mails is for you (contact form)
         'host' => '',
         'port' => 25,
         'username' => 'your_username',
