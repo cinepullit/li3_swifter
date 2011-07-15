@@ -9,8 +9,8 @@ To enable the library add the following line at the end of `app/config/bootstrap
 
     Libraries::add('li3_swifter');
 
-From here on you can access all Swiftmailer classes and create your emails by yourself. Read the
-Swiftmailer [docs](http://swiftmailer.org/docs/introduction.htm/) or you can use the
+From here on you can access all Swiftmailer classes and create your e-mails by yourself, read the
+Swiftmailer [docs](http://swiftmailer.org/docs/introduction.htm/), or you can use the
 `li3_swifter\extensions\Swifter` class.
 
 We can add global configurations to the `Swifter` class when adding the library. It's useful
@@ -23,16 +23,16 @@ when setting `smtp` configurations that's used in several locations.
         'password' => 'your_password',
     ));
 
-### Mail transport
+### E-mail transports
 
-    Swifter::mail(array $options);
-    Swifter::smtp(array $options);
+    $boolean = Swifter::mail(array $options);
+    $boolean = Swifter::smtp(array $options);
 
 The `$options` supports the following items:
 
     $options = array(
-        'from' => static::$_config['from'],
-        'to' => array('foo@bar.tld' => 'Foo Bar'),
+        'from' => array('my@mail.tld' => 'My Name'),
+        'to' => array('foo@bar.tld', 'bar@foo.tld'),
         'cc' => false,
         'bcc' => false,
         'subject' => '',

@@ -40,6 +40,7 @@ class Swifter {
     public static function __init() {
         static::$_config = Libraries::get('li3_swifter') + array(
             'from' => null,
+            'to' => null,
             'host' => 'smtp.example.org',
             'port' => 25,
             'username' => null,
@@ -90,7 +91,7 @@ class Swifter {
     protected static function _message(array $options) {
         $options += array(
             'from' => static::$_config['from'],
-            'to' => array('foo@bar.tld' => 'Foo Bar'),
+            'to' => array('foo@bar.tld'),
             'cc' => false,
             'bcc' => false,
             'subject' => '',
