@@ -16,7 +16,7 @@ Swiftmailer [docs](http://swiftmailer.org/docs/introduction.htm/), or you can us
 We can add global configurations to the `Swifter` class when adding the library. It's useful
 when setting `smtp` configurations that's used in several locations.
 
-    Libraris::add('li3_swifter', array(
+    Libraries::add('li3_swifter', array(
         'from' => array('my@mail.tld' => 'My Name'),
         'to' => 'foo@bar.tld', // Useful if all e-mails is for you (contact form)
         'host' => '',
