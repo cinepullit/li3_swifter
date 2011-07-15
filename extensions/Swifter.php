@@ -116,7 +116,7 @@ class Swifter {
                 'loader' => 'File',
                 'renderer' => 'File',
                 'paths' => array(
-                    'template' => '{:library}/views/emails/{:template}.mail.php'
+                    'template' => '{:library}/views/{:template}.mail.php'
                 )
             ));
 
