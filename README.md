@@ -71,7 +71,7 @@ Quickly send an e-mail without a template:
         'body' => 'This is the content body'
     ));
 
-Send a quick e-mail using `mail` template:
+Send a quick e-mail using a `mail` template:
 
     use li3_swifter\extensions\Swifter;
 
