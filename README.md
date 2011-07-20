@@ -46,7 +46,7 @@ The `$options` array supports the following items:
         // Template to use
         'template' => false,
 
-        // Data to be available in the template
+        // Data to be available in the template ($subject is added automatically)
         'data' => array(),
     );
 
