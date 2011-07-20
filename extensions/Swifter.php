@@ -100,6 +100,9 @@ class Swifter {
             'data' => array(), // Data to be available in the view
         );
 
+        // Subject is always available is templates as `$subject`
+        $options['subject'] = $options['subject'];
+
         $message = Swift_Message::newInstance($options['subject'])
                  ->setTo($options['to'])
                  ->setFrom($options['from']);
