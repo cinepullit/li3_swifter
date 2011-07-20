@@ -91,7 +91,7 @@ class Swifter {
     protected static function _message(array $options) {
         $options += array(
             'from' => static::$_config['from'],
-            'to' => array('foo@bar.tld'),
+            'to' => static::$_config['to'],
             'cc' => false,
             'bcc' => false,
             'subject' => '',
