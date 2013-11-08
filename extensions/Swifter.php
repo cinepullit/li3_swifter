@@ -45,6 +45,7 @@ class Swifter {
             'port' => 25,
             'username' => null,
             'password' => null,
+            'encryption' => null
         );
     }
 
@@ -60,9 +61,10 @@ class Swifter {
             'port' => static::$_config['port'],
             'username' => static::$_config['username'],
             'password' => static::$_config['password'],
+            'encryption' => static::$_config['encryption']
         );
 
-        $transport = Swift_SmtpTransport::newInstance($options['host'], $options['port'])
+        $transport = Swift_SmtpTransport::newInstance($options['host'], $options['port'], $options['encryption'])
                    ->setUsername($options['username'])
                    ->setPassword($options['password']);
 
